@@ -5,6 +5,7 @@
 * __Discord:__ Deowiser [ Vitalik ]#8330
 * __E-mail:__ deowiser@gmail.com
 * __GitHub:__ [Deowiser](https://github.com/Deowiser/)
+
 ### About me
 I'm detail-oriented, committed and friendly person. My goal is to immerse myself in the exciting world of development to become a junior frontend developer.
 ### Skills and Proficiency
@@ -14,6 +15,7 @@ I'm detail-oriented, committed and friendly person. My goal is to immerse myself
 * Version control: Git (remote service GitHub)
 * Graphics: Figma, Photoshop, Avocode, Zeplin
 * Editors: VSCode, WebStorm
+
 ### Code example:
 [__Head, Tail, Init and Last__](https://www.codewars.com/kata/54592a5052756d5c5d0009c3) Kata from CODEWARS
 
@@ -62,5 +64,6 @@ function last(arr) {return arr[arr.length - 1]}
 * [FreeCodeCamp](https://www.freecodecamp.org)
 * [Hexlet - Command line basics](https://ru.hexlet.io/courses/cli-basics)
 * [Hexlet - Introduction to Git](https://ru.hexlet.io/courses/intro_to_git)
+
 ### English
 My current level is A2 and I am working on improving my English every day.
