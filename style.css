@@ -1,4 +1,352 @@
 * {
-  margin: 0;
-  padding: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* ========== Colors ========== */
+
+:root {
+	--primary-color: #ff7613;
+	--text-color: #8a8a8a;
+}
+
+/* ========== Common styles ========== */
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: black;
+	color: white;
+}
+
+p {
+	line-height: 2;
+	color: var(--text-color);
+}
+
+li::marker {
+	color: var(--primary-color);
+}
+
+hr {
+	grid-column: 1 / -1;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 5rem;
+	margin-bottom: 1rem;
+	border: none;
+	border-top: 2px solid rgba(37, 37, 37, 0.3);
+}
+
+img {
+	width: 100%;
+}
+
+pre {
+	max-width: 600px;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	padding: 16px;
+	overflow: auto;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	background-color: rgba(37, 37, 37, 0.4);
+	border-radius: 5px;
+}
+
+code {
+	display: inline;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	color: var(--primary-color);
+	transition: color linear 0.4s;
+}
+
+a:not(:hover) {
+	transition: color linear 0.4s;
+}
+
+/* ==================== */
+
+.description {
+	margin-top: 1.5rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+
+.title {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.sub_title {
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+/* ========== Layout ========== */
+
+.container {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	padding: 5rem;
+	background: #070707;
+}
+
+@media only screen and (max-width: 1199px) {
+	pre {
+		max-width: 500px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		gap: 7rem;
+		padding: 3rem;
+	}
+
+	.code_example_inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	pre {
+		width: 600px;
+		justify-self: center;
+		align-self: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.header_container {
+		flex-direction: column;
+	}
+
+	pre {
+		max-width: 500px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.container {
+		padding: 2rem;
+	}
+	pre {
+		max-width: 320px;
+	}
+}
+
+@media only screen and (max-width: 280px) {
+	pre {
+		max-width: 240px;
+	}
+}
+
+.main,
+.code_example {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+/* ========== Course ========== */
+
+.course_logo {
+	display: block;
+	padding: 1rem;
+	max-width: 200px;
+	background-color: #353535;
+	border-radius: 5px;
+}
+
+.course_logo:hover {
+	background-color: var(--primary-color);
+	transition: background-color linear 0.5s;
+}
+
+.course_logo:not(:hover) {
+	transition: linear 0.5s;
+}
+
+.copyright {
+	margin-top: 1.5rem;
+	padding: 1rem;
+}
+
+/* ========== Header ========== */
+
+.header {
+	position: relative;
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+}
+
+.header_container {
+	display: flex;
+	gap: 2rem;
+}
+
+.header_profile_photo {
+	max-width: 250px;
+	border-radius: 5px;
+}
+
+.header_name_firstName {
+	color: white;
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 4rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+}
+
+.header_name_lastName {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+}
+
+.header_title {
+	margin-bottom: 2rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 1.5rem;
+	border-radius: 5px;
+}
+
+.menu_list {
+	display: flex;
+}
+
+.menu_list li:last-child {
+	padding-right: 0;
+}
+
+.menu_list li {
+	padding-right: 1rem;
+	font-size: 1.5rem;
+	list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.menu {
+		position: static;
+	}
+}
+
+/* ========== Skills ========== */
+
+.skill_list {
+	margin-top: 1.5rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+.my-project_list {
+	margin-top: 1.5rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+/* ========== Education and courses ========== */
+
+.education_list {
+	margin-top: 1.5rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+/* ========== Code example ========== */
+
+.task_description {
+	font-size: 1.6rem;
+}
+
+.social_item {
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+}
+
+/* ========== Footer ========== */
+
+.footer {
+	width: 100%;
+	margin: 0 auto;
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex: 1;
+	gap: 5rem;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
+.contacts_info,
+.social_list {
+	color: var(--text-color);
+	list-style-type: none;
+}
+
+.contacts_info li,
+.social_list li {
+	margin-bottom: 1.5rem;
+}
+
+.contacts_info li:last-child,
+.social_list li:last-child {
+	margin-bottom: 0rem;
+}
+
+.footer_title {
+	margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.header {
+		margin-bottom: 0;
+	}
+
+	.footer {
+		flex-direction: column;
+	}
 }
